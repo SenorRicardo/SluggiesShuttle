@@ -729,7 +729,7 @@
 				"sound_burst"			"Weapon_BetaRPG.SingleCrit"
 				}
 			}
-		"14"
+		"41"
 		{
 			"name"						"Lee-Enfield"
 			"baseitem"					"1"
@@ -739,6 +739,7 @@
 			"item_name"					"Enfield"	
 			"item_quality"				"normal"
 			"prefab"					"weapon_sniperrifle"
+			"item_class"				"tf_weapon_hunterrifle"
 			"anim_slot" 				"primary"
 			"propername"				"0"
 			"item_type_name"			"Makeshift Weapon" 	
@@ -758,30 +759,30 @@
 			}
 			"attributes"
 			{
-				"no scope" // 360
-				{
-					"attribute_class"	"mod_no_scope"
-					"value"				"1"
-				}
-				"damage bonus hidden"
+				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"1.20"
+					"value"				"1.25"
 				}
 				"fire rate penalty"
 				{
 					"attribute_class"	"mult_postfiredelay"
-					"value"				"1.20"
+					"value"				"1.25"
 				}
-				"sniper no dmg charge DISPLAY ONLY"
+				"no scope"
 				{
-					"attribute_class"	"mod_sniper_no_dmg_charge"
+					"attribute_class"	"mod_no_scope"
 					"value"				"1"
 				}
 				"no damage falloff over distance"
 				{
 					"attribute_class"	"mod_no_dmg_falloff"
 					"value"				"1"
+				}
+				"sniper aiming movespeed decreased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value"				"0.80"
 				}
 			}
 			"visuals"
