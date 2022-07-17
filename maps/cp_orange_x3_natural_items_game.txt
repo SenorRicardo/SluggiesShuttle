@@ -179,10 +179,16 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"crit vs burning players"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"or_crit_vs_playercond"
+					"value"				"1"
+				}
+			
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
 				}
 			}
 		}
@@ -769,9 +775,9 @@
 					"attribute_class"	"mult_postfiredelay"
 					"value"				"1.25"
 				}
-				"no scope"
+				"soft zoom"
 				{
-					"attribute_class"	"mod_no_scope"
+					"attribute_class"	"mod_sniper_soft_zoom"
 					"value"				"1"
 				}
 				"no damage falloff over distance"
@@ -789,6 +795,52 @@
 			{
 				"sound_single_shot"		"Weapon_Enfield.Fire"	
 				"sound_burst"			"Weapon_Enfield.Fire"
+			}
+		}
+		"21"
+		{
+			"name"						"M2 Flamethrower"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"M2 Flamethrower"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_flamethrower"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_m2"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/c_models/c_flamethrower.mdl"
+			"model_player"				"models/weapons/c_models/c_flamethrower.mdl"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"attributes"
+			{
+                "damage penalty"
+                {
+                    "attribute_class"    "mult_dmg"
+                    "value"                "0.75"
+				}
+                "afterburn duration bonus"
+                {
+                    "attribute_class"    "afterburn_duration_mult"
+					"value"				"1.20"
+				}
+                "deploy time decreased"
+                {
+                    "attribute_class"    "mult_deploy_time"
+					"value"				"0.60"
+				}
 			}
 		}
 	}
