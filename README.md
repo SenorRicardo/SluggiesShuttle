@@ -14,6 +14,12 @@ Right click on the map > 7zip > add to archive > BZip2.
 
 ## How to host an NML server
 
+### Clone the repo
+```
+git clone https://no-manns-land.github.io/NML.git
+```
+Then migrate the folders over into your `tf2classic` directory on your server
+
 ### Add this in your server.cfg
 ```
 sv_allowdownload 1 
