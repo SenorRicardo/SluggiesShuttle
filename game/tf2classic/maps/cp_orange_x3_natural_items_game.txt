@@ -1,0 +1,850 @@
+"custom_items_game"
+{
+	"items"
+	{
+		"18"
+		{
+			"name"						"TF_WEAPON_MAUSER" 		
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"The Makeshift Mauser" 				
+			"item_quality"				"normal"
+			"item_class"				"tf_weapon_shotgun_primary"
+			"propername"				"0"
+			"item_type_name"			"Junk Gun" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_mauser"		
+			
+			
+			"image_inventory"			"backpack/weapons/mauser"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_mauser_soldier.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_mauser_soldier.mdl"
+			"anim_slot" "secondary"
+			"attach_to_hands"			"2"
+			
+			"used_by_classes"
+			{
+				"soldier"					"1"
+			}
+			"static_attrs"
+			{
+				"min_viewmodel_offset"					"0 0 0"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Mauser.Fire"
+				"sound_burst"			"Weapon_Mauser.Fire"
+			}	
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"0.10"
+				}
+				"Reload time increased"
+				{
+					"attribute_class"	"mult_reload_time"
+					"value"				"1.70"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"6"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.15"
+				}
+                "no damage falloff over distance"
+                {
+                    "attribute_class"    "mod_no_dmg_falloff"
+                    "value"                "1"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "1.30"
+                }
+			}
+			
+			"mouse_pressed_sound"		"#ui/item_metal_weapon_pickup.wav"
+			"drop_sound"				"#ui/item_metal_weapon_drop.wav"
+		}
+		"0"
+		{
+			"name"						"Trench Club"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Trench Club" 				
+			"item_quality"				"normal"
+			"item_class"				"tf_weapon_bat"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_trenchclub"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/c_models/c_bat.mdl"
+			"model_player"				"models/weapons/c_models/c_bat.mdl"
+			"anim_slot" "melee"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"6"
+		{
+			"name"						"Spade"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Spade"				
+			"item_quality"				"normal"
+			"prefab"					"weapon_shovel"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_spade"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/c_models/c_shovel/c_shovel.mdl"
+			"model_player"				"models/weapons/c_models/c_shovel/c_shovel.mdl"
+			"anim_slot" "melee"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"soldier"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"2"
+		{
+			"name"						"Waraxe"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Waraxe"				
+			"item_quality"				"normal"
+			"prefab"					"weapon_fireaxe"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_waraxe"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_fireaxe.mdl"
+			"model_player"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"attributes"
+			{
+				"crit vs burning players"
+				{
+					"attribute_class"	"or_crit_vs_playercond"
+					"value"				"1"
+				}
+			
+				"crit mod disabled"
+				{
+					"attribute_class"	"mult_crit_chance"
+					"value"				"0"
+				}
+			}
+		}
+		"5"
+		{
+			"name"						"Fisticuffs"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Fisticuffs"				
+			"item_quality"				"normal"
+			"prefab"					"weapon_fists"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_fisticuffs"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_player"				"models/weapons/v_models/v_fist_heavy.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"1"
+		{
+			"name"						"Pickaxe"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Pickaxe"				
+			"item_quality"				"normal"
+			"prefab"					"weapon_bottle"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_pickaxe"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_bottle.mdl"
+			"model_player"				"models/weapons/v_models/v_bottle_demoman.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"demoman"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"7"
+		{
+			"name"						"Combination Wrench"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Combination Wrench"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_wrench"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_combwrench"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_nml_wrench.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_wrench.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"engineer"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"8"
+		{
+			"name"						"Syringe"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Syringe"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_bonesaw"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_syringe"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_bonesaw.mdl"
+			"model_player"				"models/weapons/v_models/v_bonesaw_medic.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"3"
+		{
+			"name"						"Machete"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Machete"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_club"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_machete"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_machete.mdl"
+			"model_player"				"models/weapons/v_models/v_machete_sniper.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"4"
+		{
+			"name"						"Combat Knife"
+			"baseitem"					"1"
+			"item_slot"					"melee"
+	//		
+			"propername"				"0"
+			"item_name"					"Combat Knife"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_knife"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_combknife"		
+
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_knife.mdl"
+			"model_player"				"models/weapons/v_models/v_knife_spy.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"spy"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+			}
+		}
+		"17"
+		{
+			"name"						"Machinepisstol 40"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"Machinepisstol 40"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_syringegun"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_mp40"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_nml_mp40.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_mp40.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"medic"					"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SMG.Single"
+			}	
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+                "clip size penalty"
+                {
+                    "attribute_class"    "mult_clipsize"
+                    "value"                "0.80"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+					"value"				"1.25"
+				}
+			}
+		}
+		"39"
+		{
+			"name"						"Sten"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"Sten"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_nailgun"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_sten"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_nml_mp40.mdl"
+			"model_player"				"models/weapons/v_models/v_nmp_stentemp.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_SMG.Single"
+			}	
+			"attributes"
+			{
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+                "clip size bonus"	
+                {
+                    "attribute_class"    "mult_clipsize"
+                    "value"                "1.27"
+				}
+                "no damage falloff over distance"
+                {
+                    "attribute_class"    "mod_no_dmg_falloff"
+					"value"				"1"
+				}
+			}
+		}
+		"12"
+		{
+			"name"						"Trench Shotgun Pyro"
+			"baseitem"					"1"
+			"item_slot"					"secondary"
+	//		
+			"propername"				"0"
+			"item_name"					"Trench Shotgun"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_shotgun"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_trenchshotgun"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_pyro.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"1.3"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "1.15"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.20"
+				}
+			}
+		}
+		"9"
+		{
+			"name"						"Trench Shotgun Engy"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"Trench Shotgun"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_shotgun"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_trenchshotgun"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_engineer.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"engineer"					"1"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"1.3"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "1.15"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.20"
+				}
+			}
+		}
+		"13"
+		{
+			"name"						"Trench Shotgun Scout"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"Trench Shotgun"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_shotgun"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_trenchshotgun"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_shotgun.mdl"
+			"model_player"				"models/weapons/v_models/v_shotgun_engineer.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"scout"					"1"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"1.3"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "1.15"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.20"
+				}
+			}
+		}
+		"4000"
+		{
+			"name"						"Mortar"
+			"baseitem"					"1"
+			"item_slot"					"secondary"
+	//		
+			"propername"				"0"
+			"item_name"					"Mortar"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_flaregun"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_mortar"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_nml_mortar.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_mortar.mdl"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"soldier"					"1"
+			}
+			"attributes"
+			{
+				"rocket gravity"
+				{	
+					"attribute_class"	"mod_rocket_gravity"
+					"value"				"0.25"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"3.7"
+				}
+				"Projectile speed decreased"
+				{
+					"attribute_class"	"mult_projectile_speed"
+					"value"				"0.75"
+				}
+				"mod no reload DISPLAY ONLY"
+				{
+					"attribute_class"	"mod_no_reload_display_only"
+					"value"				"0"
+				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}				
+				"custom projectile model"
+				{
+					"attribute_class"	"custom_projectile_model"
+					"value"				"models/weapons/w_models/w_rocketbeta.mdl"
+				}
+				"crit_vs_burning_FLARES_DISPLAY_ONLY"
+				{
+					"attribute_class"	"crit_vs_burning_FLARES_DISPLAY_ONLY"
+					"value"				"0"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"2"
+				}
+				"blast dmg to self increased"
+				{
+					"attribute_class"	"blast_dmg_to_self"
+					"value"				"3"
+				}
+				"single wep deploy time increased"
+				{
+					"attribute_class"	"mult_single_wep_deploy_time"
+					"value"				"2.65"
+				}
+				"maxammo primary reduced"
+				{
+					"attribute_class"	"mult_maxammo_secondary"
+					"value"				"0.38"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_BetaRPG.Single"
+				"sound_burst"			"Weapon_BetaRPG.SingleCrit"
+				}
+			}
+		"41"
+		{
+			"name"						"Lee-Enfield"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"Enfield"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_sniperrifle"
+			"item_class"				"tf_weapon_hunterrifle"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_enfield"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_nml_enfield_sniper.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_enfield_sniper.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"sniper"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"1.25"
+				}
+				"fire rate penalty"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"1.25"
+				}
+				"soft zoom"
+				{
+					"attribute_class"	"mod_sniper_soft_zoom"
+					"value"				"1"
+				}
+				"no damage falloff over distance"
+				{
+					"attribute_class"	"mod_no_dmg_falloff"
+					"value"				"1"
+				}
+				"sniper aiming movespeed decreased"
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value"				"0.80"
+				}
+			}
+			"visuals"
+			{
+				"sound_single_shot"		"Weapon_Enfield.Fire"	
+				"sound_burst"			"Weapon_Enfield.Fire"
+			}
+		}
+		"21"
+		{
+			"name"						"M2 Flamethrower"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+	//		
+			"propername"				"0"
+			"item_name"					"M2 Flamethrower"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_flamethrower"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Makeshift Weapon" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_m2"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/c_models/c_flamethrower.mdl"
+			"model_player"				"models/weapons/c_models/c_flamethrower.mdl"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"pyro"					"1"
+			}
+			"attributes"
+			{
+                "damage penalty"
+                {
+                    "attribute_class"    "mult_dmg"
+                    "value"                "0.75"
+				}
+                "afterburn duration bonus"
+                {
+                    "attribute_class"    "afterburn_duration_mult"
+					"value"				"1.20"
+				}
+                "deploy time decreased"
+                {
+                    "attribute_class"    "mult_deploy_time"
+					"value"				"0.60"
+				}
+			}
+		}
+	}
+}
+
+
+
