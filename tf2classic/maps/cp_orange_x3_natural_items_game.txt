@@ -246,9 +246,9 @@
 			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/w_models/w_bottle.mdl"
-			"model_player"				"models/weapons/v_models/v_bottle_demoman.mdl"
-			"attach_to_hands"			"2"
+			"model_world"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
+			"model_player"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
+			"attach_to_hands"			"1"
 		
 
 			"used_by_classes"
@@ -892,11 +892,163 @@
 				{
 					"attribute_class"	"mult_spread_scale"
 					"value"				"1.20"
+		}
+	   }
+	  }
+		"4001"																					// BOY, this weapon gets weird. Watch. I'll comment about it.
+		{
+			"name"						"TF_WEAPON_LMG"
+			"show_in_armory"			"1"
+			"anim_slot"					"secondary"												// See this? Changes Heavy's animation slot to the Shotgun animations. He uses Shotgun animations in world now.
+			"prefab"					"weapon_minigun"
+			"propername"				"0"
+			"item_quality"				"normal"
+			"item_name"					"Light Machine Gun"
+			"item_type_name"			"Light Machine Gun"
+			"item_description"			"
+This gun bring memories back to old days of killing many, many baby men.
+Good times..."
+			"item_logname" 				"tf_weapon_machinegun"
+			"model_world"				"models/weapons/w_models/w_machinegun.mdl"
+			"model_player"				"models/weapons/v_models/v_machinegun_heavy.mdl"		// There's a bit of an issue in that Paysus (the original animator) for some reason didn't see fit to animate Heavy's right arm in the v_model. Rather than cut it out, I had to leave it there...
+			"attach_to_hands"			"2"
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+			"static_attrs"
+			{
+				"class select override vcd"				"taunt02"								// The class select menu also accepts Taunt .vcd files! Try to choose silent ones, because the voice lines still play.
+			}
+			"attributes"
+			{
+				"aiming movespeed increased"													// Surprisingly works. Increases your move speed while you're revved up
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value"				"1.35"
+				}
+				"minigun spinup time decreased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value"				"0.75"
+				}
+				"minigun spindown time decreased"
+				{
+					"attribute_class"	"mult_minigun_spindown_time"
+					"value"				"0.65"
+				}
+				"fire rate bonus"
+				{
+					"attribute_class"	"mult_postfiredelay"
+					"value" 			"0.85"
+				}
+				"damage penalty"
+				{
+					"attribute_class"	"mult_dmg"
+					"value" 			"0.50"
 				}
 			}
+			"visuals"																			// This is where the fun begins.
+			{
+				"animation_replacement" 														// THIS IS A DOOZY. This section basically forcibly tells the game that, instead of using his Primary animations for spooling, remap them to the Secondary idle poses.
+				{
+					//The Attacking Animations
+					"ACT_MP_ATTACK_STAND_SECONDARY"				"ACT_MP_ATTACK_STAND_PRIMARY"
+					"ACT_MP_ATTACK_STAND_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_STAND_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+
+					"ACT_MP_ATTACK_CROUCH_SECONDARY"			"ACT_MP_ATTACK_CROUCH_PRIMARY"
+					"ACT_MP_ATTACK_CROUCH_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+
+					"ACT_MP_ATTACK_SWIM_SECONDARY"				"ACT_MP_ATTACK_SWIM_PRIMARY"
+					"ACT_MP_ATTACK_SWIM_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
+					//Deployed					
+					"ACT_MP_DEPLOYED_IDLE"						"ACT_MP_STAND_SECONDARY"		// Standing Deployed
+					"ACT_MP_DEPLOYED_PRIMARY"					"ACT_MP_RUN_SECONDARY"			// [UNUSED FOR HEAVY MINIGUNS] Moving Deployed
+					"ACT_MP_DEPLOYED"							"ACT_MP_RUN_SECONDARY" 			// Moving Deployed; THIS ONE was just sheer luck that I even found it at all. I guess it's the default activity for this?
+
+					"ACT_MP_CROUCH_DEPLOYED_IDLE"				"ACT_MP_CROUCH_SECONDARY"		// Crouched Deployed
+					"ACT_MP_CROUCHWALK_DEPLOYED"				"ACT_MP_CROUCHWALK_PRIMARY"		// [UNUSED FOR HEAVY MINIGUNS] Moving Crouched Deployed
+
+					"ACT_MP_SWIM_DEPLOYED"						"ACT_MP_SWIM_SECONDARY"			// Swimming Deployed
+//					"ACT_MP_SWIM_DEPLOYED_PRIMARY"				"ACT_MP_SWIM_SECONDARY"
+				}
+			}
+			"mouse_pressed_sound"		"#ui/item_heavy_gun_pickup.wav"
+			"drop_sound"				"#ui/item_heavy_gun_drop.wav"
 		}
-	}
-}
+		"15"
+		{
+			"name"						"TF_WEAPON_HMG"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+			"prefab"					"weapon_minigun"
+	//		
+			"propername"				"0"
+			"item_name"					"Heavy Machine Gun"	
+			"item_quality"				"normal"
+			"anim_slot" 				"primary"
+			"propername"				"0"
+			"item_type_name"			"Old Gun" 	
+			"item_description"			"play in thirdperson or with invisasble arms, hadn is fucked."
+			"item_logname"				"tf_weapon_hmg"		
+			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/w_models/w_nml_hmg.mdl"
+			"model_player"				"models/weapons/v_models/v_nml_hmg.mdl"
+			"attach_to_hands"			"2"
+		
 
-
+			"used_by_classes"
+			{
+				"heavy"					"1"
+			}
+			"attributes"
+			{
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "2.5"
+				}
+                "no damage falloff over distance"
+                {
+                    "attribute_class"    "mod_no_dmg_falloff"
+                    "value"                "1"
+				}
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"3.5"
+				}
+				"weapon spread bonus"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"0.40"
+				}
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"0.50"
+				}
+				"aiming movespeed decreased"													// Surprisingly works. Increases your move speed while you're revved up
+				{
+					"attribute_class"	"mult_player_aiming_movespeed"
+					"value"				"0.60"
+				}
+				"minigun spinup time increased"
+				{
+					"attribute_class"	"mult_minigun_spinup_time"
+					"value"				"1.25"
+				}
+				"minigun spindown time increased"
+				{
+					"attribute_class"	"mult_minigun_spindown_time"
+					"value"				"1.25"
+				}
+			 }
+			}
+		   }
 
