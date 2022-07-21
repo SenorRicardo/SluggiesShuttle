@@ -246,9 +246,9 @@
 			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
-			"model_player"				"models/weapons/v_models/v_fireaxe_pyro.mdl"
-			"attach_to_hands"			"1"
+			"model_world"				"models/weapons/v_models/v_shovel_soldier.mdl"
+			"model_player"				"models/weapons/v_models/v_shovel_soldier.mdl"
+			"attach_to_hands"			"2"
 		
 
 			"used_by_classes"
