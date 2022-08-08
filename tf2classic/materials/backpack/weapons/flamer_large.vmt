@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "backpack\weapons\flamer_large"
+	"$translucent" 1
+}

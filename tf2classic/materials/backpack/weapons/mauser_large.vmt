@@ -1,7 +1,5 @@
-"LightmappedGeneric"
+"UnlitGeneric"
 {
-	"$basetexture" "backpack/weapons/mauser_large"
+	"$baseTexture" "backpack\weapons\mauser_large"
 	"$translucent" 1
-	"$vertexcolor" 1
-	"$ignorez"       1
 }
