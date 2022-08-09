@@ -1,0 +1,34 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" "models\weapons\v_models\Welrod\Welrod"
+	"$bumpmap" 	"models\weapons\v_models\Welrod\Welrod_n"
+	"$nocull" "1"
+        "$phong" "1"
+        "$phongexponent" "20"
+        "$phongboost" "2"
+        "$lightwarptexture" "models\lightwarps\weapon_lightwarp"
+        "$phongfresnelranges"   "[.10 0.2 1]"
+        "$basemapalphaphongmask" "1"
+ 
+ 
+        // Rim lighting parameters
+        "$rimlight" "1"                                                                                         // To enable rim lighting (requires phong)
+        "$rimlightexponent" "15"                                                                         // Exponent for phong component of rim lighting 
+        "$rimlightboost" "1.15"                                                                            // Boost for ambient cube component of rim lighting
+ 
+        // Cloaking
+        "$cloakPassEnabled" "1"
+ 
+        "Proxies"
+	{
+		"AnimatedWeaponSheen"
+		{
+			"animatedtexturevar" 		"$sheenmapmask"
+			"animatedtextureframenumvar" 	"$sheenmapmaskframe"
+			"animatedtextureframerate" 		"40"
+		}
+		"invis"
+		{
+		}
+	}
+}
