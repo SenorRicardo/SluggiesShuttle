@@ -8,8 +8,8 @@
 			"baseitem"					"1"
 			"item_slot"					"primary"
 	//		
-			"propername"				"1"
-			"item_name"					"Makeshift Mauser" 				
+			"propername"				"0"
+			"item_name"					"Rifle" 				
 			"item_quality"				"normal"
 			"item_class"				"tf_weapon_shotgun_primary"
 			"item_type_name"			"Junk Gun" 	
@@ -142,10 +142,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -178,16 +178,10 @@
 			}
 			"attributes"
 			{
-				"crit vs burning players"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"or_crit_vs_playercond"
-					"value"				"1"
-				}
-			
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"				"0"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -256,10 +250,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -292,10 +286,15 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
+				}
+				"upgrade rate decrease"
+				{
+					"attribute_class"	"upgrade_rate_mod"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -328,10 +327,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -364,10 +363,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -400,10 +399,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -817,12 +816,12 @@
 		}
 		"21"
 		{
-			"name"						"M2 Flamethrower"
+			"name"						"Flamer"
 			"baseitem"					"1"
 			"item_slot"					"primary"
 	//		
 			"propername"				"0"
-			"item_name"					"M2 Flamethrower"	
+			"item_name"					"Flamer"	
 			"item_quality"				"normal"
 			"prefab"					"weapon_flamethrower"
 			"anim_slot" 				"primary"
