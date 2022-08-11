@@ -436,7 +436,7 @@
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_SMG.Single"
-				 "muzzle_flash"            "muzzle_scattergun"
+				"muzzle_flash"            "muzzle_scattergun"
 
 			}	
 			"attributes"
@@ -695,15 +695,15 @@
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"0.75"
 				}
-				"mod no reload DISPLAY ONLY"
+				"clip size penalty"
 				{
 					"attribute_class"	"mod_no_reload_display_only"
 					"value"				"0"
 				}
 				"no damage falloff over distance"
 				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.25"
 				}				
 				"custom projectile model"
 				{
@@ -728,22 +728,7 @@
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"				"2.75"
-				}
-				"mod ammo per shot" 
-				{
-					"attribute_class"	"mod_ammo_per_shot"
-					"value"				"4"
-				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value"				"1"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"				"0.65"
+					"value"				"3.00"
 				}
 			}
 			"visuals"
