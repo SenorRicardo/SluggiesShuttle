@@ -8,8 +8,8 @@
 			"baseitem"					"1"
 			"item_slot"					"primary"
 	//		
-			"propername"				"1"
-			"item_name"					"Makeshift Mauser" 				
+			"propername"				"0"
+			"item_name"					"Rifle" 				
 			"item_quality"				"normal"
 			"item_class"				"tf_weapon_shotgun_primary"
 			"item_type_name"			"Junk Gun" 	
@@ -22,7 +22,7 @@
 			"image_inventory_size_h"		"82"
 			"model_world"				"models/weapons/w_models/w_mauser_soldier.mdl"
 			"model_player"				"models/weapons/v_models/v_nml_mauser_soldier.mdl"
-			"anim_slot" "secondary"
+			"anim_slot" 				"secondary"
 			"attach_to_hands"			"2"
 			
 			"used_by_classes"
@@ -90,11 +90,11 @@
 			"item_description"			"POW RIGHT IN THE KISSER"
 			"item_logname"				"tf_weapon_trenchclub"		
 
-			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/c_models/c_bat.mdl"
-			"model_player"				"models/weapons/c_models/c_bat.mdl"
+			"image_inventory"			"backpack/weapons/w_models/w_bat"
+			"model_world"				"models/weapons/w_models/w_bat.mdl"
+			"model_player"				"models/weapons/v_models/v_bat_scout.mdl"
 			"anim_slot" "melee"
 			"attach_to_hands"			"1"
 		
@@ -114,12 +114,12 @@
 		}
 		"6"
 		{
-			"name"						"Spade"
+			"name"						"Entrenching Tool"
 			"baseitem"					"1"
 			"item_slot"					"melee"
 	//		
 			"propername"				"0"
-			"item_name"					"Spade"				
+			"item_name"					"Entrenching Tool"				
 			"item_quality"				"normal"
 			"prefab"					"weapon_shovel"
 			"propername"				"0"
@@ -142,10 +142,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -178,16 +178,10 @@
 			}
 			"attributes"
 			{
-				"crit vs burning players"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"or_crit_vs_playercond"
-					"value"				"1"
-				}
-			
-				"crit mod disabled"
-				{
-					"attribute_class"	"mult_crit_chance"
-					"value"				"0"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -256,10 +250,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -292,10 +286,15 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
+				}
+				"upgrade rate decrease"
+				{
+					"attribute_class"	"upgrade_rate_mod"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -328,10 +327,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -364,10 +363,10 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
@@ -400,21 +399,21 @@
 			}
 			"attributes"
 			{
-				"damage bonus"
+				"fire rate bonus hidden"
 				{
-					"attribute_class"	"mult_dmg"
-					"value"				"1.25"
+					"attribute_class"	"mult_postfiredelay"
+					"value"				"0.80"
 				}
 			}
 		}
 		"17"
 		{
-			"name"						"Machinepisstol 40"
+			"name"						"MP-40"
 			"baseitem"					"1"
 			"item_slot"					"primary"
 	//		
 			"propername"				"0"
-			"item_name"					"Machinepisstol 40"	
+			"item_name"					"MP-40"	
 			"item_quality"				"normal"
 			"prefab"					"weapon_syringegun"
 			"anim_slot" 				"primary"
@@ -422,7 +421,7 @@
 			"item_type_name"			"Standard Issue" 	
 			"item_description"			"POW RIGHT IN THE KISSER"
 			"item_logname"				"tf_weapon_mp40"		
-			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory"			"backpack/weapons/mp40"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
 			"model_world"				"models/weapons/v_models/v_nml_mp40.mdl"
@@ -437,7 +436,7 @@
 			"visuals"
 			{
 				"sound_single_shot"		"Weapon_SMG.Single"
-				 "muzzle_flash"            "muzzle_scattergun"
+				"muzzle_flash"            "muzzle_scattergun"
 
 			}	
 			"attributes"
@@ -469,15 +468,15 @@
 			"item_name"					"Sten"	
 			"item_quality"				"normal"
 			"prefab"					"weapon_nailgun"
-			"anim_slot" 				"primary"
+			"anim_slot"					"item2"
 			"propername"				"0"
 			"item_type_name"			"Standard Issue" 	
 			"item_description"			"POW RIGHT IN THE KISSER"
 			"item_logname"				"tf_weapon_sten"		
-			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory"			"backpack/weapons/sten"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/v_models/v_nml_mp40.mdl"
+			"model_world"				"models/weapons/w_models/w_nmp_stentemp.mdl"
 			"model_player"				"models/weapons/v_models/v_nmp_stentemp.mdl"
 			"attach_to_hands"			"2"
 		
@@ -677,6 +676,7 @@
 			"used_by_classes"
 			{
 				"soldier"					"1"
+				"pyro" 						"misc"
 			}
 			"attributes"
 			{
@@ -695,15 +695,15 @@
 					"attribute_class"	"mult_projectile_speed"
 					"value"				"0.75"
 				}
-				"mod no reload DISPLAY ONLY"
+				"clip size penalty"
 				{
 					"attribute_class"	"mod_no_reload_display_only"
 					"value"				"0"
 				}
 				"no damage falloff over distance"
 				{
-					"attribute_class"	"mod_no_dmg_falloff"
-					"value"				"1"
+					"attribute_class"	"mult_clipsize"
+					"value"				"0.25"
 				}				
 				"custom projectile model"
 				{
@@ -728,22 +728,7 @@
 				"single wep deploy time increased"
 				{
 					"attribute_class"	"mult_single_wep_deploy_time"
-					"value"				"2.75"
-				}
-				"mod ammo per shot" 
-				{
-					"attribute_class"	"mod_ammo_per_shot"
-					"value"				"4"
-				}
-				"provide on active"
-				{
-					"attribute_class"	"provide_on_active"
-					"value"				"1"
-				}
-				"move speed penalty"
-				{
-					"attribute_class"	"mult_player_movespeed"
-					"value"				"0.65"
+					"value"				"3.00"
 				}
 			}
 			"visuals"
@@ -816,12 +801,12 @@
 		}
 		"21"
 		{
-			"name"						"M2 Flamethrower"
+			"name"						"Flamer"
 			"baseitem"					"1"
 			"item_slot"					"primary"
 	//		
 			"propername"				"0"
-			"item_name"					"M2 Flamethrower"	
+			"item_name"					"Flamer"	
 			"item_quality"				"normal"
 			"prefab"					"weapon_flamethrower"
 			"anim_slot" 				"primary"
@@ -920,6 +905,7 @@
 This gun bring memories back to old days of killing many, many baby men.
 Good times..."
 			"item_logname" 				"tf_weapon_machinegun"
+			"image_inventory"			"backpack/weapons/lmg"
 			"model_world"				"models/weapons/w_models/w_machinegun.mdl"
 			"model_player"				"models/weapons/v_models/v_machinegun_heavy.mdl"		// There's a bit of an issue in that Paysus (the original animator) for some reason didn't see fit to animate Heavy's right arm in the v_model. Rather than cut it out, I had to leave it there...
 			"attach_to_hands"			"2"
@@ -965,15 +951,15 @@ Good times..."
 				{
 					//The Attacking Animations
 					"ACT_MP_ATTACK_STAND_SECONDARY"				"ACT_MP_ATTACK_STAND_PRIMARY"
-					"ACT_MP_ATTACK_STAND_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_STAND_PREFIRE"				"ACT_MP_GESTURE_FLINCH_RIGHTARM"
 					"ACT_MP_ATTACK_STAND_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
 
 					"ACT_MP_ATTACK_CROUCH_SECONDARY"			"ACT_MP_ATTACK_CROUCH_PRIMARY"
-					"ACT_MP_ATTACK_CROUCH_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_CROUCH_PREFIRE"				"ACT_MP_GESTURE_FLINCH_RIGHTARM"
 					"ACT_MP_ATTACK_CROUCH_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
 
 					"ACT_MP_ATTACK_SWIM_SECONDARY"				"ACT_MP_ATTACK_SWIM_PRIMARY"
-					"ACT_MP_ATTACK_SWIM_PREFIRE"				"ACT_MP_GESTURE_VC_FISTPUMP_SECONDARY"
+					"ACT_MP_ATTACK_SWIM_PREFIRE"				"ACT_MP_GESTURE_FLINCH_RIGHTARM"
 					"ACT_MP_ATTACK_SWIM_POSTFIRE"				"ACT_MP_GESTURE_FLINCH_CHEST"
 					//Deployed					
 					"ACT_MP_DEPLOYED_IDLE"						"ACT_MP_STAND_SECONDARY"		// Standing Deployed
@@ -1061,5 +1047,122 @@ Good times..."
 				}
 			 }
 			}
-		   }
+		"43"
+		{
+			"name"						"Welrod"
+			"baseitem"					"1"
+			"item_slot"					"primary"
+			"anim_slot"					"secondary"
+	//		
+			"propername"				"0"
+			"item_name"					"Welrod"				
+			"item_quality"				"normal"
+			"item_class"				"tf_weapon_tranq"
+			"propername"				"0"
+			"item_type_name"			"Standard Issue" 	
+			"item_description"			"Meincraft!"
+			"item_logname"				"tf_weapon_welrod"		
+
+			"image_inventory"			"backpack/weapons/welrod"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_welrod_spy.mdl"
+			"model_player"				"models/weapons/v_models/v_welrod_spy.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"spy"					"1"
+			}
+			"attributes"
+			{
+				"damage bonus"
+				{
+					"attribute_class"	"mult_dmg"
+					"value"				"2.75"
+				}
+				"override projectile type"
+				{
+					"attribute_class"	"override_projectile_type"
+					"value"				"1"
+				}
+			 }
+			}
+		"38"
+		{
+			"name"						"Disabled"
+			"baseitem"					"0"
+			"item_slot"					"primary"
+			"anim_slot"					"secondary"
+	//		
+			"propername"				"0"
+			"item_name"					"tf_weapon_disabled"				
+			"item_quality"				"normal"
+			"item_class"				"no_entity"
+			"propername"				"0"
+			"item_type_name"			"Standard Issue" 	
+			"item_description"			"Meincraft!"
+			"item_logname"				"tf_weapon_unused"		
+
+			"image_inventory"			"backpack/weapons/welrod"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/v_models/v_welrod_spy.mdl"
+			"model_player"				"models/weapons/v_models/v_welrod_spy.mdl"
+			"attach_to_hands"			"2"
+		
+
+			"used_by_classes"
+			{
+				"soldier"					"misc"
+				}
+			}
+		"10"
+		{
+			"name"						"Trench Shotgun"
+			"baseitem"					"1"
+			"item_slot"					"secondary"
+	//		
+			"propername"				"0"
+			"item_name"					"Trench Shotgun"	
+			"item_quality"				"normal"
+			"prefab"					"weapon_shotgun"
+			"propername"				"0"
+			"item_type_name"			"Standard Issue" 	
+			"item_description"			"POW RIGHT IN THE KISSER"
+			"item_logname"				"tf_weapon_trenchshotgun"		
+			"image_inventory"			"backpack/weapons/trench"
+			"image_inventory_size_w"		"128"
+			"image_inventory_size_h"		"82"
+			"model_world"				"models/weapons/c_models/c_shotgun.mdl"
+			"model_player"				"models/weapons/c_models/c_shotgun.mdl"
+			"attach_to_hands"			"1"
+		
+
+			"used_by_classes"
+			{
+				"soldier"					"secondary"
+			}
+			"attributes"
+			{
+				"bullets per shot bonus"
+				{
+					"attribute_class"	"mult_bullets_per_shot"
+					"value"	"1.3"
+				}
+                "fire rate penalty"
+                {
+                    "attribute_class"    "mult_postfiredelay"
+                    "value"                "1.15"
+				}
+				"spread penalty"
+				{
+					"attribute_class"	"mult_spread_scale"
+					"value"				"1.20"
+				}
+			}
+		}
+	}
+}
 
