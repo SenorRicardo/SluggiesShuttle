@@ -1,18 +1,11 @@
 // File generated for use in NML servers
 Resources
 {
-	"maps\cp_orange_x3_natural.bsp.bz2"	"file"
 	"maps\cp_orange_x3_natural.nav"	"file"
-	"maps\cp_orange_x3_natural.res"	"file"
 	"maps\cp_orange_x3_natural_items_game.txt"	"file"
-	"maps\ctf_2fort.res"	"file"
 	"maps\ctf_2fort_items_game.txt"	"file"
-	"maps\itemtest.res"	"file"
 	"maps\itemtest_items_game.txt"	"file"
-	"maps\koth_harvest.res"	"file"
-	"maps\koth_harvest_final.res"	"file"
 	"maps\koth_harvest_final_items_game.txt"	"file"
-	"maps\pl_barnblitz.res"	"file"
 	"maps\pl_barnblitz_items_game.txt"	"file"
 	"materials\backpack\weapons\america_large.vmt"	"file"
 	"materials\backpack\weapons\america_large.vtf"	"file"
