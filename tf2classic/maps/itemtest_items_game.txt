@@ -239,8 +239,8 @@
 			"image_inventory"			"backpack/weapons/pickaxe"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/v_models/v_shovel_soldier.mdl"
-			"model_player"				"models/weapons/v_models/v_shovel_soldier.mdl"
+			"model_world"				"models/weapons/c_models/c_nml_pickaxe.mdl"
+			"model_player"				"models/weapons/c_models/c_nml_pickaxe.mdl"
 			"attach_to_hands"			"2"
 		
 
