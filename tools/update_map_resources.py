@@ -3,11 +3,11 @@ from shutil import copyfile
 
 DIRECTORY = "tf2classic/maps"
 
-def findBsps(path):
+def findMapRef(path):
     files = []
 
     for file in listdir(path):
-        if ".bsp" in file:
+        if "_items_game.txt" in file:
             files.append(file)
 
     return files
@@ -17,7 +17,7 @@ def makeResCopies(maps, maps_dir):
     
     for m in maps:
 
-        map_name = m.split(".bsp")
+        map_name = m.split("_items_game.txt")
         print(map_name[0])
         dst = maps_dir + f"/{map_name[0]}.res"
         copyfile(src, dst)
@@ -28,7 +28,7 @@ def main():
 
     chdir(f"../{DIRECTORY}") # maps directory
     maps_dir = getcwd()
-    maps = findBsps(maps_dir)
+    maps = findMapRef(maps_dir)
     chdir(owd)
     makeResCopies(maps, maps_dir)
 

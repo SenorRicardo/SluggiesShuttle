@@ -1,7 +1,7 @@
 from os import chdir, walk, path, getcwd
 
 DIRECTORY = "tf2classic"
-BANNED = [".bsp", ".DS_Store", ".vpk", ".txt", "maps"]
+BANNED = [".bsp", ".DS_Store", ".vpk",]
 
 def absoluteFilePaths(directory):
     for dirpath,_,filenames in walk(directory):
@@ -11,7 +11,7 @@ def absoluteFilePaths(directory):
 def cleanOutPut(files_list, game_dir):
     clean = []
     for item in files_list:
-        clean.append(item.split(game_dir)[1])
+        clean.append(item.split(game_dir)[1][1:])
     
     for b in BANNED:
         for c in clean:
