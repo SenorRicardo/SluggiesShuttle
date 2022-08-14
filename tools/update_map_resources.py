@@ -1,7 +1,7 @@
 from os import chdir, listdir, path, getcwd
 from shutil import copyfile
 
-DIRECTORY = "tf2classic/maps"
+DIRECTORY = "tf2classic/custom/NML/maps"
 
 def findMapRef(path):
     files = []
