@@ -1,12 +1,6 @@
 // File generated for use in NML servers
 Resources
 {
-	"custom\NML\maps\cp_orange_x3_natural.nav"	"file"
-	"custom\NML\maps\cp_orange_x3_natural_items_game.txt"	"file"
-	"custom\NML\maps\ctf_2fort_items_game.txt"	"file"
-	"custom\NML\maps\itemtest_items_game.txt"	"file"
-	"custom\NML\maps\koth_harvest_final_items_game.txt"	"file"
-	"custom\NML\maps\pl_barnblitz_items_game.txt"	"file"
 	"custom\NML\materials\backpack\weapons\america_large.vmt"	"file"
 	"custom\NML\materials\backpack\weapons\america_large.vtf"	"file"
 	"custom\NML\materials\backpack\weapons\brass_large.vmt"	"file"
@@ -252,4 +246,10 @@ Resources
 	"custom\NML\sound\weapons\mauser_fire.wav"	"file"
 	"custom\NML\sound\weapons\shotgun_shoot_crit.wav"	"file"
 	"custom\NML\sound\weapons\warfare_shoot.wav"	"file"
+	"maps\cp_orange_x3_natural.nav"	"file"
+	"maps\cp_orange_x3_natural_items_game.txt"	"file"
+	"maps\ctf_2fort_items_game.txt"	"file"
+	"maps\itemtest_items_game.txt"	"file"
+	"maps\koth_harvest_final_items_game.txt"	"file"
+	"maps\pl_barnblitz_items_game.txt"	"file"
 }
