@@ -1,4 +1,4 @@
-game_sounds_manifest
+game_sounds_nml_manifest
 {
 	"precache_file"		"scripts/game_sounds_tf2c.txt"
 	"precache_file"  	"scripts/game_sounds_physics_tf2c.txt"
