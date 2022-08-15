@@ -13,13 +13,13 @@ def findMapRef(path):
     return files
     
 def makeResCopies(maps, maps_dir):
-    src = "global_resources.res"
+    src = "global_sounds.txt"
     
     for m in maps:
 
         map_name = m.split("_items_game.txt")
         print(map_name[0])
-        dst = maps_dir + f"/{map_name[0]}.res"
+        dst = maps_dir + f"/{map_name[0]}_level_sounds.txt"
         copyfile(src, dst)
     
     
