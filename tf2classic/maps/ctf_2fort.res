@@ -1,6 +1,8 @@
 // File generated for use in NML servers
 Resources
 {
+	"maps\cp_orange_rc1_items_game.txt"	"file"
+	"maps\cp_orange_rc1_level_sounds.txt"	"file"
 	"maps\cp_orange_x3_natural.nav"	"file"
 	"maps\cp_orange_x3_natural_items_game.txt"	"file"
 	"maps\cp_orange_x3_natural_level_sounds.txt"	"file"
