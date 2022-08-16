@@ -1,4 +1,4 @@
-from os import chdir, listdir, getcwd
+from os import chdir, listdir, path, getcwd
 from shutil import copyfile
 
 DIRECTORY = "tf2classic/maps"
