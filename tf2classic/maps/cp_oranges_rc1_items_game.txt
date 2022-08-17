@@ -313,12 +313,12 @@
 			"item_description"			"POW RIGHT IN THE KISSER"
 			"item_logname"				"tf_weapon_syringe"		
 
-			"image_inventory"			"backpack/weapons/w_models/w_shotgun"
+			"image_inventory"			"backpack/weapons/nmlsyringe"
 			"image_inventory_size_w"		"128"
 			"image_inventory_size_h"		"82"
-			"model_world"				"models/weapons/w_models/w_bonesaw.mdl"
-			"model_player"				"models/weapons/v_models/v_bonesaw_medic.mdl"
-			"attach_to_hands"			"2"
+			"model_world"				"models/weapons/c_models/c_nml_syringe.mdl"
+			"model_player"				"models/weapons/c_models/c_nml_syringe.mdl"
+			"attach_to_hands"			"1"
 		
 
 			"used_by_classes"
@@ -1008,22 +1008,17 @@ Good times..."
                 "fire rate penalty"
                 {
                     "attribute_class"    "mult_postfiredelay"
-                    "value"                "2.5"
-				}
-                "no damage falloff over distance"
-                {
-                    "attribute_class"    "mod_no_dmg_falloff"
-                    "value"                "1"
+                    "value"                "1.20"
 				}
 				"damage bonus"
 				{
 					"attribute_class"	"mult_dmg"
-					"value"				"3.5"
+					"value"				"1.20"
 				}
 				"weapon spread bonus"
 				{
 					"attribute_class"	"mult_spread_scale"
-					"value"				"0.40"
+					"value"				"0.80"
 				}
 				"bullets per shot bonus"
 				{
