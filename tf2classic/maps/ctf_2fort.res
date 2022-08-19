@@ -286,7 +286,6 @@ Resources
 	"models\workshop\weapons\c_models\c_switchblade\c_switchblade.phy"	"file"
 	"models\workshop\weapons\c_models\c_switchblade\c_switchblade.sw.vtx"	"file"
 	"models\workshop\weapons\c_models\c_switchblade\c_switchblade.vvd"	"file"
-	"sound\sound.cache"	"file"
 	"sound\weapons\enfield_fire.wav"	"file"
 	"sound\weapons\mauser_fire.wav"	"file"
 	"sound\weapons\shotgun_shoot_crit.wav"	"file"
