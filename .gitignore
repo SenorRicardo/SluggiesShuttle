@@ -5,3 +5,5 @@ tf2classic/custom/NML/maps/cp_orange_x3_natural.bsp
 *.smd
 tf2classic/custom/NML/sound/sound.cache
 nml.7z
+*.pyc
+__pycache__
