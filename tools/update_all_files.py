@@ -1,9 +1,11 @@
-import os 
+import global_resource_gen
+import update_map_resources
+import update_map_sounds
 
 def main():
-    os.system('python3 global_resource_gen.py')
-    os.system('python3 update_map_resources.py')
-    os.system('python3 update_map_sounds.py')
+    global_resource_gen.run()
+    update_map_resources.run()
+    update_map_sounds.run()
 
 if __name__ == '__main__':
     main()
