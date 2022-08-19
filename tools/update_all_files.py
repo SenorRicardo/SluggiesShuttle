@@ -3,9 +3,9 @@ import update_map_resources
 import update_map_sounds
 
 def main():
-    global_resource_gen.run()
-    update_map_resources.run()
-    update_map_sounds.run()
+    global_resource_gen.main()
+    update_map_resources.main()
+    update_map_sounds.main()
 
 if __name__ == '__main__':
     main()

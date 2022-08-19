@@ -22,9 +22,6 @@ def makeResCopies(maps, maps_dir):
         dst = maps_dir + f"/{map_name[0]}_level_sounds.txt"
         copyfile(src, dst)
     
-def run():
-    main()
-
 def main():
     owd = getcwd()
 

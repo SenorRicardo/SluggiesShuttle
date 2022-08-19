@@ -40,8 +40,5 @@ def main():
     chdir(owd)
     recordResFile(clean)
 
-def run():
-    main()
-
 if __name__ == '__main__':
     main()
