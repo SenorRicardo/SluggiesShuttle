@@ -9,3 +9,4 @@ tools/.vscode
 tf2classic/sound/sound.cache
 *.smd
 *.pyc
+tools/temp_resources.txt

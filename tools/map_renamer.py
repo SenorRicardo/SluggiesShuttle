@@ -1,7 +1,7 @@
 
 from subprocess import call
 from sys import argv, exit
-from os import chdir, getcwd, listdir, lseek, mkdir, path, rename
+from os import chdir, getcwd, mkdir, path, rename,walk
 from winreg import HKEY_CURRENT_USER, OpenKey, QueryValueEx
 
 # NOTES: REMAKE IN C++
@@ -35,7 +35,7 @@ def main():
     if not args:
         no_input()
 
-    if len(args) == 1 and args[0][-4:] == '-h':
+    if len(args) == 1 and args[0] == '-h':
         help()
 
     elif len(args) == 3 and args[1] == "-o":
@@ -43,7 +43,6 @@ def main():
         if args[2][-4:] == ".bsp":
             temp_first_name = args[0].split("maps")
             first_name = temp_first_name[1][1:]
-          
             if first_name == args[2]:
                 dupe_name()
             else:
@@ -54,29 +53,35 @@ def main():
     else:
         for arg in args:
             if arg[-4:] == ".bsp":
-                map_name = input("What is the new name for this map?\n")
-                map_workflow(arg, map_name)
+                given_name = input("What is the new name for this map?\n")
+                map_workflow(arg, given_name)
             else:
                 print(f"Ignoring file \"{arg}\"")
     
-def map_workflow(map_path, map_name):
+def map_workflow(map_path, given_name):
     bspzip_path = find_bspzip()
-    workspace = getcwd()
-
+    workspace = getcwd() + "\\temp" 
     temp_first_name = map_path.split("maps")
     original_name = temp_first_name[1][1:]
-        
-    if map_name[-4:] != ".bsp":
-        map_name += ".bsp"
+
+    if given_name[-4:] != ".bsp":
+        given_name += ".bsp"
 
     if not path.isdir("temp"):
+        print("Creating temp directory.")
         mkdir("temp")
 
     chdir(bspzip_path)
 
-    extract_files(map_path, workspace + "/temp")
+    extract_files(map_path, workspace)
 
-    rename_files(map_name, workspace + "/temp", original_name)
+    rename_files(given_name[:-4], workspace, original_name[:-4])
+
+    create_res(workspace)
+
+    open_vmt()
+
+    embed_files()
 
 def find_bspzip():
     
@@ -108,20 +113,47 @@ def extract_files(map_path, temp_path):
     if (path.exists("bspzip.exe")):
         call(f"./bspzip -extractfiles \"{map_path}\" \"{temp_path}\"")
 
-def rename_files(map_name, workspace, original_name):
+def rename_files(given_name, workspace, original_name):
 
-    for filename in enumerate(listdir(workspace)):
-        if filename in map_name:
-            
-        dst = f"Hostel"
-        src =f"{workspace}/{filename}"  # foldername/filename, if .py file is outside folder
-        dst =f"{workspace}/{dst}"
-         
-        # rename() function will
-        # rename all the files
-        rename(src, dst)
+    for r, d, f in walk(workspace):
+        
+        for file in f:
+            if original_name in file:
+                old_path = path.join(r, file)
+                temp_name = file.split(original_name)
+                temp_name.insert(1, given_name)
+                new_path = path.join(r, ''.join(temp_name))
+                print(f"Renaming to {new_path}")
+                rename(old_path, new_path)
+
+        for dir in d: # not renaming 'materials/orange_x3_natural' for some reason
+            if original_name in dir:
+                old_dir = path.join(r, dir)
+                temp_dir = dir.split(original_name)
+                temp_dir.insert(1, given_name)
+                new_dir = path.join(r, ''.join(temp_dir))
+                print(f"Renaming to {new_dir}")
+                rename(old_dir, new_dir)               
+
+def create_res(workspace):
+    chdir(workspace)
+    chdir("../")
+    
+    res = open("temp_resources.txt", "w")
+    for r, d, f in walk(workspace):
+        for file in f:
+            temp_file = r.split(workspace)
+            res.write(path.join(temp_file[1][1:], file + '\n')) # internal file
+            res.write(path.join(r, file) + '\n') # external file
+
+    res.close()
+
+    print("Wrote resource file")
 
 def embed_files():
+    print(a)
+
+def open_vmt():
     print(a)
 
 # dialogues
